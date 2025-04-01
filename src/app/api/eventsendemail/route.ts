@@ -25,9 +25,13 @@ const saveEvents = (events: any[]) => {
 
 
 const createTransporter = () => nodemailer.createTransport({
-  host: '0.0.0.0',
-  port: 1025,
-  secure: false,
+  host: 'smtp.yandex.ru',
+  port: 465,
+  secure: true,
+  auth: {
+    user: "mailing@tonar.info",
+    pass: "icbfkjwfmfeiwitb",
+  },
   tls: { rejectUnauthorized: false }
 });
 
@@ -227,9 +231,9 @@ export async function POST(request: NextRequest) {
     if (status === 'Подтверждаю участие') {
       const transporter = createTransporter();
       await transporter.sendMail({
-        from: `"Форма обратной связи" <${email}>`,
+        from: "mailing@tonar.info",
         to: email,
-        subject: `Подтверждение заявки от ${name}`,
+        subject: `Рассылка Тонар`,
         html: emailTemplate(name, email)
       });
       emailSent = true;
