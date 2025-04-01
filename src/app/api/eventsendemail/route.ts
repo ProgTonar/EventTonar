@@ -52,6 +52,7 @@ const emailTemplate = (name: string, email: string) => `
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+       
       }
       .container {
         width: 100%;
@@ -61,6 +62,7 @@ const emailTemplate = (name: string, email: string) => `
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         overflow: hidden;
+        border: 3px solid #235390;
       }
       .header {
         text-align: center;
