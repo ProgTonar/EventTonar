@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Жуков Андрей Сергеевич",
+    "name_biz": "ООО МЗ Тонар",
+    "status": "Подтверждаю участие"
+  },
+  {
+    "name": "Жуков Андрей",
+    "name_biz": "Тонар",
+    "status": "Подтверждаю участие"
+  },
+  {
+    "name": "иаиаиа",
+    "name_biz": "вмвививи",
+    "email": "test@tets.ru",
+    "status": "Подтверждаю участие"
+  },
+  {
+    "name": "fdgbgrg",
+    "name_biz": "efegeg",
+    "email": "test@tets.ru",
+    "status": "Подтверждаю участие"
+  },
+  {
+    "name": "dbgrbrb",
+    "name_biz": "gegerge",
+    "email": "test@tets.ru",
+    "status": "Подтверждаю участие"
+  },
+  {
+    "name": "ynynyn",
+    "name_biz": "hnynyyn",
+    "email": "test@tets.ru",
+    "status": "Подтверждаю участие",
+    "id": "1743427628223",
+    "registeredAt": "2025-03-31T13:27:08.223Z"
+  },
+  {
+    "name": "тест",
+    "email": "test@tets.ru",
+    "name_biz": "тест",
+    "status": "Подтверждаю участие",
+    "id": "1743442368316",
+    "registeredAt": "2025-03-31T17:32:48.316Z"
+  },
+  {
+    "name": "жук",
+    "email": "gudvin109@gmail.com",
+    "name_biz": "Андрей",
+    "id": "1743442926816",
+    "registeredAt": "2025-03-31T17:42:06.816Z",
+    "status": "Подтверждаю участие"
+  },
+  {
+    "name": "Жуков Андрей Сергеевич",
+    "email": "gudvin109@gmail.com",
+    "name_biz": "ООО МЗ Тонар",
+    "id": "1743443209718",
+    "registeredAt": "2025-03-31T17:46:49.718Z",
+    "status": "Подтверждаю участие"
+  },
+  {
+    "name": "тест",
+    "email": "test@tets.ru",
+    "name_biz": "тест",
+    "id": "1743443247936",
+    "registeredAt": "2025-03-31T17:47:27.936Z",
+    "status": "К сожалению, не смогу посетить"
+  }
+]
