@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export interface EventProps {
   id: string;
@@ -84,6 +85,13 @@ export default function EventTableClient({
             <h3 className="text-lg font-semibold text-red-800">Отказались</h3>
             <p className="text-3xl font-bold text-red-700">{stats.declined}</p>
           </div>
+        </div>
+
+        <div
+          onClick={() => window.location.reload()}
+          className="pb-2 text-gray-600 cursor-pointer"
+        >
+          Обновить
         </div>
 
         {loading ? (
