@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Приглашение на ежегодную презентацию предприятия",
-  description: "",
+  title: "Презентация Тонар",
+  description: "Приглашение на ежегодную презентацию предприятия",
 };
 
 export default function RootLayout({
