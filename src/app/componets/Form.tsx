@@ -25,13 +25,28 @@ export default function Form() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Функция для проверки валидности email
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleSubmit = async (e: React.FormEvent, status: string) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.name_biz) {
+    // Проверка заполнения всех полей
+    if (!formData.name || !formData.name_biz || !formData.email) {
       setSubmitStatus({
         success: false,
         message: "Пожалуйста, заполните все поля формы",
+      });
+      return;
+    }
+
+    // Проверка валидности email
+    if (!isValidEmail(formData.email)) {
+      setSubmitStatus({
+        success: false,
+        message: "Пожалуйста, введите корректный email",
       });
       return;
     }
@@ -63,6 +78,15 @@ export default function Form() {
     <div className="bg-white h-[95%] w-[95%] md:w-[932px] md:h-[700px] rounded-[30px] md:p-[20px] overflow-hidden flex flex-col md:flex-row">
       <div className="md:w-1/2 h-full md:rounded-[30px] flex flex-col relative overflow-hidden pl-4 pr-4 md:p-0">
         <ToastContainer />
+        {/* Добавляем отображение ошибки */}
+        {submitStatus && !submitStatus.success && (
+          <div className="absolute top-4 left-0 right-0 flex justify-center z-50">
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+              <span className="block sm:inline">{submitStatus.message}</span>
+            </div>
+          </div>
+        )}
+
         <div className="absolute inset-0 bg-gradient-to-b from-[#EBF4FF] to-[#2269BB] z-0" />
         <div className="absolute inset-0 bg-[url(/bg_mobile.svg)] md:bg-[url(/bg.svg)] bg-cover md:bg-center bg-bottom z-10" />
         <div className="flex items-center justify-center p-[50px] z-11">
@@ -115,7 +139,7 @@ export default function Form() {
 
             <div className="flex flex-col space-y-2">
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 value={formData.email}
@@ -201,7 +225,7 @@ export default function Form() {
 
           <div className="flex flex-col space-y-2">
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               value={formData.email}
