@@ -119,7 +119,7 @@ export async function GET() {
     initDataFile();
     return NextResponse.json(readEvents());
   } catch (error) {
-    console.error('Error reading events:', error);
+    console.error('Ошибка чтения events:', error);
     return NextResponse.json(
       { error: 'Ошибка при чтении данных' }, 
       { status: 500 }
@@ -170,7 +170,7 @@ export async function POST(request: NextRequest) {
     }, { status: 201 });
     
   } catch (error) {
-    console.error('Error processing request:', error);
+    console.error('Ошибка выполнения запроса:', error);
     return NextResponse.json(
       { 
         success: false, 

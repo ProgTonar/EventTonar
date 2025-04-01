@@ -1,5 +1,5 @@
 import axios from "axios";
-import EventTableClient, { EventProps } from "./client";
+import EventTableClient from "./client";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -18,12 +18,12 @@ async function getEvents() {
     });
 
     if (!response.data) {
-      throw new Error("Failed to fetch events");
+      throw new Error("Не удалось получить events");
     }
 
     return response.data;
   } catch (error) {
-    console.error("Error fetching events:", error);
+    console.error("Ошибка при получении events:", error);
     return [];
   }
 }
