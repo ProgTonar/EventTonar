@@ -8,6 +8,7 @@ export interface EventProps {
   id: string;
   name: string;
   name_biz: string;
+  email: string;
   status: string;
   registeredAt: string;
 }
@@ -115,6 +116,7 @@ export default function EventTableClient({
                   <th className="py-3 px-4 text-left">
                     Наименование предприятия
                   </th>
+                  <th className="py-3 px-4 text-left">Email участника</th>
                   <th className="py-3 px-4 text-left">Статус</th>
                 </tr>
               </thead>
@@ -127,6 +129,7 @@ export default function EventTableClient({
                     <td className="py-3 px-4">{index + 1}</td>
                     <td className="py-3 px-4">{event.name}</td>
                     <td className="py-3 px-4">{event.name_biz}</td>
+                    <td className="py-3 px-4">{event.email}</td>
                     <td className="py-3 px-4">
                       <span
                         className={`inline-block px-3 py-1 rounded-full text-sm ${
